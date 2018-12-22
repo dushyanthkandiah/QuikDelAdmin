@@ -1,0 +1,98 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    tools:context="Fragments.FragmentProducts">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginRight="10dp"
+                android:text="Select Product Type :"
+                android:layout_height="wrap_content" />
+
+            <Spinner
+                android:id="@+id/spinnerSelectType"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:layout_weight="1"
+                android:background="@drawable/spinner_background_v2"
+                android:clickable="true"
+                android:focusable="false"
+                android:maxLines="1"
+                android:textColorHint="@color/colorMuted"
+                android:textSize="10dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="13"
+                android:text="Name"
+                android:textStyle="bold"
+                android:textAlignment="textStart"
+                android:textColor="@color/colorPrimary"
+                android:gravity="start" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:text="Qty"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimary" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:layout_weight="5"
+                android:text="Price"
+                android:textAlignment="textEnd"
+                android:textColor="@color/colorPrimary"
+                android:gravity="end" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginBottom="5dp"
+            android:background="@color/colorAccentLight" />
+
+        <android.support.v4.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/swp2Rfsh"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rcyView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

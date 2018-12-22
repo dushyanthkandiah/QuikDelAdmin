@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cardClick"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+
+    android:foreground="?android:attr/selectableItemBackground"
+    app:cardBackgroundColor="@android:color/transparent"
+    app:cardElevation="0dp"
+    tools:ignore="KeyboardInaccessibleWidget">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/lblItemId"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="Id"
+                android:textColor="@color/colorPrimary"
+                tools:ignore="Suspicious0dp" />
+
+            <TextView
+                android:id="@+id/lblUserName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:text="User"
+                android:textAlignment="textStart"
+                android:textColor="@color/colorPrimary"
+                tools:ignore="Suspicious0dp"
+                android:gravity="start" />
+
+            <TextView
+                android:id="@+id/lblRequestTotal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:text="Total"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimary"
+                tools:ignore="Suspicious0dp" />
+
+            <TextView
+                android:id="@+id/lblStatus"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:gravity="end"
+                android:text="Status"
+                android:textColor="@color/colorPrimary"
+                tools:ignore="Suspicious0dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/lblRequestDate"
+                    android:layout_width="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:text="Date/Time"
+                    android:textAlignment="center"
+                    tools:ignore="Suspicious0dp" />
+
+            <TextView
+                android:id="@+id/lblRemarks"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:gravity="center_vertical"
+                android:text="Remarks : Need this item asap d sd ds s sf fs ff fs f  " />
+
+            </LinearLayout>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/markBill"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|bottom"
+                android:clickable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                app:cardBackgroundColor="@android:color/transparent"
+                app:cardElevation="0dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:text="Mark Request"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+            </android.support.v7.widget.CardView>
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorMuted" />
+
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>
