@@ -51,7 +51,7 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
 
         new checkTrial().execute();
-
+        checkRememberUser();
 
 
     }
@@ -156,10 +156,10 @@ public class LoginActivity extends AppCompatActivity {
 
         @Override
         protected void onPreExecute() {
-            pDialog = new ProgressDialog(LoginActivity.this);
-            pDialog.setCancelable(false);
-            pDialog.setMessage("Initializing Quik Del...");
-            if (!pDialog.isShowing()) pDialog.show();
+//            pDialog = new ProgressDialog(LoginActivity.this);
+//            pDialog.setCancelable(false);
+//            pDialog.setMessage("Initializing Quik Del...");
+//            if (!pDialog.isShowing()) pDialog.show();
 
             OtherShortcuts.hideKeyboard(LoginActivity.this);
         }
@@ -196,12 +196,12 @@ public class LoginActivity extends AppCompatActivity {
 
         @Override
         protected void onPostExecute(Void aVoid) {
-            if (pDialog.isShowing()) pDialog.hide();
+//            if (pDialog.isShowing()) pDialog.hide();
 
             if (flag.equals("success")) {
 
                 if (result.equals("allow")) {
-                    checkRememberUser();
+//                    checkRememberUser();
                 } else {
                     finish();
                 }
